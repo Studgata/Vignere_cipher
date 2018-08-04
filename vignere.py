@@ -1,3 +1,5 @@
+print("********************************************************Vignere Ciphere*******************************************************")
+print("********************************************************Vignere Table*******************************************************")
 count = 0
 ext_alph = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 alph_table = []
@@ -30,13 +32,14 @@ def encrypt():
         
     nk = nk + d+ kkkk
     print(nk)
+    key_length= len(nk)
     print(data_length)
     print(len(nk))
     row = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
     column = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
     encrypted_data = ""
     if data_length == len(nk):    
-        for x in range(0,len(nk)+1):
+        for x in range(0,key_length):
             fill= data[x]
             keyto = nk[x]
             c = row.find(fill)
@@ -44,7 +47,23 @@ def encrypt():
             encr = alph_table[c][r]
             encrypted_data = encrypted_data + encr
         print(encrypted_data)
-            
+    decrypt(encrypted_data,nk)
 
-encrypt()
-        
+
+
+    
+def decrypt(data,key):
+    print("*******Decryption********")
+    dta = data
+    keu = key
+    row = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+    column = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+    
+    
+    
+
+def main():
+    encrypt()
+    
+if __name__ == "__main__":
+    main()
