@@ -1,2 +1,2 @@
-# Vignere Cipher implemented with Python
-Vignere Cipher implementation with table method
+# Vigenere Cipher implemented with Python
+Vigenere Cipher implementation with table method
